@@ -1,6 +1,6 @@
 # The Ring Standard Library
 # Game Engine for 2D Games
-# Flappy Bird 300 Game
+# Flappy Bird 3000 Game
 # 2016, Mahmoud Fayed <msfclipper@yahoo.com>
 
 oGameState = NULL
@@ -27,6 +27,7 @@ func main
 		FPS = GAME_FPS
 		FixedFPS = GAME_FixedFPS
 		title = "Flappy Bird 3000"
+		icon  = "images/fbbirddown.png"
 		sprite
 		{
 			file = "images/fbback.png"
@@ -296,6 +297,10 @@ func playstart oGame
 			state = func oGame,oSelf {
 				oSelf { text = "Score : " + oGameState.score }
 			}
+		}
+
+		Sound {
+			file = "sound/music2.wav"
 		}
 
 	}
